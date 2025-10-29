@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>بنك أسئلة كيمياء تفاعلي</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <h1>بنك أسئلة الكيمياء التفاعلي</h1>
+    <form>
+      <label for="name">الاسم الثالث</label>
+      <input type="text" id="name" name="name" required>
+      
+      <label for="class">الشعبة</label>
+      <select id="class" name="class">
+        <option value="A">الشعبة A</option>
+        <option value="B">الشعبة B</option>
+      </select>
+
+      <button type="submit">ابدأ الاختبار</button>
+    </form>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f4;
+  text-align: center;
+  margin-top: 50px;
+}
+
+.container {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  width: 300px;
+  margin: 0 auto;
+}
+
+button {
+  background-color: #4CAF50;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #45a049;
+}
+document.querySelector("form").addEventListener("submit", function(event) {
+  event.preventDefault();
+  
+  const name = document.getElementById("name").value;
+  const classSelection = document.getElementById("class").value;
+  
+  alert(`مرحبا ${name}! لقد اخترت الشعبة: ${classSelection}`);
+});
+git init
+git add .
+git commit -m "Initial commit"
+git remote add origin https://github.com/yourusername/your-repository.git
+git push -u origin master
